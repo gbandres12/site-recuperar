@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800;9..144,900&display=swap');
 
 :root {
   --bg: #07080a;
@@ -14,8 +14,8 @@
   --glass-border: rgba(255,255,255,0.09);
   --gold-border: rgba(201,168,76,0.35);
   --gold-glow: rgba(201,168,76,0.15);
-  --font: 'Space Grotesk', sans-serif;
-  --serif: 'Cormorant Garamond', serif;
+  --font: 'Plus Jakarta Sans', sans-serif;
+  --serif: 'Fraunces', serif;
   --radius: 16px;
   --radius-sm: 10px;
   --radius-full: 9999px;
@@ -279,12 +279,30 @@ section { padding: 6rem 0; }
 .about-item { display: flex; align-items: center; gap: .65rem; font-size: .875rem; font-weight: 500; color: var(--silver-light); }
 .about-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; box-shadow: 0 0 6px rgba(201,168,76,.5); }
 
+/* ── WhatsApp Float ── */
+.wa-float {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+  display: flex; align-items: center; gap: .65rem;
+  background: #25d366;
+  color: #fff;
+  padding: .85rem 1.4rem .85rem 1.1rem;
+  border-radius: var(--radius-full);
+  font-size: .85rem; font-weight: 600;
+  box-shadow: 0 8px 32px rgba(37,211,102,.35);
+  text-decoration: none;
+  transition: box-shadow var(--transition);
+}
+.wa-float:hover { box-shadow: 0 12px 40px rgba(37,211,102,.55); }
+.wa-label { white-space: nowrap; }
+
 /* ── Cases ── */
 .cases-header {
   display: flex; justify-content: space-between; align-items: flex-end;
   margin-bottom: 3rem; gap: 2rem; flex-wrap: wrap;
 }
 .cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.cases-grid > *:nth-child(4) { grid-column: 1 / 2; }
+.cases-grid > *:nth-child(5) { grid-column: 2 / 3; }
 .case-card {
   padding: 2rem; border-left: 3px solid var(--gold); display: flex; flex-direction: column;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
